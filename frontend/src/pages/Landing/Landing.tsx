@@ -1,24 +1,16 @@
 // import Landing from '@/pages/Landing/Landing'
 
-// ====================< IMPORTS: REACT >=================================
+// ==========<  IMPORTS:  REACT  >===================================
 import { Helmet } from 'react-helmet-async'
 
-// ====================< IMPORTS: LAYOUT >================================
-
-// ====================< IMPORTS: PAGES >=================================
-
-// ====================< IMPORTS: COMPONENTS >============================
+// ==========<  IMPORTS:  LAYOUTS, PAGES, COMPONENTS  >==============
 import { Box, Typography } from '@mui/material'
 
-// ====================< IMPORTS: TYPES >=================================
+// ==========<  IMPORTS:  TYPES, CONTEXTS/HOOKS, UTILS  >============
 
-// ====================< IMPORTS: CONTEXTS/HOOKS >========================
+// ==========<  IMPORTS:  OTHER  >===================================
 
-// ====================< IMPORTS: UTILS >=================================
-
-// ====================< IMPORTS: OTHER >=================================
-
-// ====================< IMPORTS: STYLES >================================
+// ==========<  IMPORTS:  STYLES  >==================================
 
 
 export default function Landing() {
@@ -28,7 +20,7 @@ export default function Landing() {
       <Helmet><title>Landing</title></Helmet>
 
 
-      <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 2, height: '100%' }}>
+      <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 2, width: '100%', height: '100%' }}>
 
 
         <Typography>Landing page</Typography>

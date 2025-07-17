@@ -1,24 +1,16 @@
 // import { useTheme } from '@/hooks/useTheme'
 
-// ====================< IMPORTS: REACT >=================================
+// ==========<  IMPORTS:  REACT  >===================================
 import { useContext } from 'react'
 
-// ====================< IMPORTS: LAYOUT >================================
+// ==========<  IMPORTS:  LAYOUTS, PAGES, COMPONENTS  >==============
 
-// ====================< IMPORTS: PAGES >=================================
-
-// ====================< IMPORTS: COMPONENTS >============================
-
-// ====================< IMPORTS: TYPES >=================================
-
-// ====================< IMPORTS: CONTEXTS/HOOKS >========================
+// ==========<  IMPORTS:  TYPES, CONTEXTS/HOOKS, UTILS  >============
 import { ThemeContext } from '@/contexts/ThemeContext'
 
-// ====================< IMPORTS: UTILS >=================================
+// ==========<  IMPORTS:  OTHER  >===================================
 
-// ====================< IMPORTS: OTHER >=================================
-
-// ====================< IMPORTS: STYLES >================================
+// ==========<  IMPORTS:  STYLES  >==================================
 
 
 // Hook to use the Theme Context.

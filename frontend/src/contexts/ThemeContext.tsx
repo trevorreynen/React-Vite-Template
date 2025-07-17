@@ -1,24 +1,16 @@
 // import { ThemeProvider, ThemeContext } from '@/contexts/ThemeContext'
 
-// ====================< IMPORTS: REACT >=================================
+// ==========<  IMPORTS:  REACT  >===================================
 import { createContext, useState, useEffect, useCallback, ReactNode } from 'react'
 
-// ====================< IMPORTS: LAYOUT >================================
+// ==========<  IMPORTS:  LAYOUTS, PAGES, COMPONENTS  >==============
 
-// ====================< IMPORTS: PAGES >=================================
-
-// ====================< IMPORTS: COMPONENTS >============================
-
-// ====================< IMPORTS: TYPES >=================================
+// ==========<  IMPORTS:  TYPES, CONTEXTS/HOOKS, UTILS  >============
 import { ThemePreference, ThemeState } from '@/types'
 
-// ====================< IMPORTS: CONTEXTS/HOOKS >========================
+// ==========<  IMPORTS:  OTHER  >===================================
 
-// ====================< IMPORTS: UTILS >=================================
-
-// ====================< IMPORTS: OTHER >=================================
-
-// ====================< IMPORTS: STYLES >================================
+// ==========<  IMPORTS:  STYLES  >==================================
 
 
 // Create Context.

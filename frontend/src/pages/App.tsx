@@ -1,24 +1,16 @@
 // import App from '@/pages/App'
 
-// ====================< IMPORTS: REACT >=================================
+// ==========<  IMPORTS:  REACT  >===================================
 import { useRoutes, useLocation } from 'react-router-dom'
 
-// ====================< IMPORTS: LAYOUT >================================
+// ==========<  IMPORTS:  LAYOUTS, PAGES, COMPONENTS  >==============
 
-// ====================< IMPORTS: PAGES >=================================
+// ==========<  IMPORTS:  TYPES, CONTEXTS/HOOKS, UTILS  >============
 
-// ====================< IMPORTS: COMPONENTS >============================
-
-// ====================< IMPORTS: TYPES >=================================
-
-// ====================< IMPORTS: CONTEXTS/HOOKS >========================
-
-// ====================< IMPORTS: UTILS >=================================
-
-// ====================< IMPORTS: OTHER >=================================
+// ==========<  IMPORTS:  OTHER  >===================================
 import { useRoutesConfig } from '@/config/routesConfig'
 
-// ====================< IMPORTS: STYLES >================================
+// ==========<  IMPORTS:  STYLES  >==================================
 import '@/styles/global.scss'
 
 
@@ -29,7 +21,6 @@ export default function App() {
   // Capture background location if we're opening a modal.
   const state = location.state as { backgroundLocation?: Location }
   const routeElements = useRoutes(routes, state?.backgroundLocation || location)
-
 
   // Render app.
   return (

@@ -1,28 +1,19 @@
 // import { TitleProvider, TitleContext } from '@/contexts/TitleManager'
 
-// ====================< IMPORTS: REACT >=================================
+// ==========<  IMPORTS:  REACT  >===================================
 import { createContext, ReactNode, useEffect, useRef } from 'react'
 import { Helmet } from 'react-helmet-async'
 
-// ====================< IMPORTS: LAYOUT >================================
+// ==========<  IMPORTS:  LAYOUTS, PAGES, COMPONENTS  >==============
 
-// ====================< IMPORTS: PAGES >=================================
+// ==========<  IMPORTS:  TYPES, CONTEXTS/HOOKS, UTILS  >============
 
-// ====================< IMPORTS: COMPONENTS >============================
+// ==========<  IMPORTS:  OTHER  >===================================
 
-// ====================< IMPORTS: TYPES >=================================
-
-// ====================< IMPORTS: CONTEXTS/HOOKS >========================
-
-// ====================< IMPORTS: UTILS >=================================
-
-// ====================< IMPORTS: OTHER >=================================
-
-// ====================< IMPORTS: STYLES >================================
+// ==========<  IMPORTS:  STYLES  >==================================
 
 
 const TITLE_PREFIX = import.meta.env.VITE_FRONTEND_WEBSITE_TITLE ? import.meta.env.VITE_FRONTEND_WEBSITE_TITLE : ''
-
 
 // Create Context.
 export const TitleContext = createContext<(title: string, skipPrefix?: boolean) => void>(() => {})
@@ -31,6 +22,14 @@ export const TitleContext = createContext<(title: string, skipPrefix?: boolean) 
 // Title Provider.
 export const TitleProvider = ({ children }: { children: ReactNode }) => {
   const observerRef = useRef<MutationObserver | null>(null)
+
+  let allowNoPrefix = false
+
+  // Optional function to allow programmatic control.
+  const setTitle = (rawTitle: string, skipPrefix = false) => {
+    allowNoPrefix = skipPrefix
+    document.title = skipPrefix ? rawTitle : `${TITLE_PREFIX} ${rawTitle}`
+  }
 
   useEffect(() => {
     const observer = new MutationObserver(() => {
@@ -41,7 +40,11 @@ export const TitleProvider = ({ children }: { children: ReactNode }) => {
       }
 
       if (!title.startsWith(TITLE_PREFIX)) {
-        document.title = `${TITLE_PREFIX} ${title}`
+        if (!allowNoPrefix) {
+          document.title = `${TITLE_PREFIX} ${title}`
+        } else {
+          allowNoPrefix = false // reset after one pass
+        }
       }
     })
 
@@ -50,11 +53,6 @@ export const TitleProvider = ({ children }: { children: ReactNode }) => {
 
     return () => observer.disconnect()
   }, [])
-
-  // Optional function to allow programmatic control.
-  const setTitle = (rawTitle: string, skipPrefix = false) => {
-    document.title = skipPrefix ? rawTitle : `${TITLE_PREFIX} ${rawTitle}`
-  }
 
   return (
     <TitleContext.Provider value={setTitle}>

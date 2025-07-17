@@ -1,27 +1,20 @@
 // import { useTitleManager } from '@/hooks/useTitleManager'
 
-// ====================< IMPORTS: REACT >=================================
+// ==========<  IMPORTS:  REACT  >===================================
 import { useContext } from 'react'
 
-// ====================< IMPORTS: LAYOUT >================================
+// ==========<  IMPORTS:  LAYOUTS, PAGES, COMPONENTS  >==============
 
-// ====================< IMPORTS: PAGES >=================================
-
-// ====================< IMPORTS: COMPONENTS >============================
-
-// ====================< IMPORTS: TYPES >=================================
-
-// ====================< IMPORTS: CONTEXTS/HOOKS >========================
+// ==========<  IMPORTS:  TYPES, CONTEXTS/HOOKS, UTILS  >============
 import { TitleContext } from '@/contexts/TitleManager'
 
-// ====================< IMPORTS: UTILS >=================================
+// ==========<  IMPORTS:  OTHER  >===================================
 
-// ====================< IMPORTS: OTHER >=================================
-
-// ====================< IMPORTS: STYLES >================================
+// ==========<  IMPORTS:  STYLES  >==================================
 
 
 // Hook to programmatically set the page title with prefix.
 export const useTitleManager = () => {
   return useContext(TitleContext)
 }
+

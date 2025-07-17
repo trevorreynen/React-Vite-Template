@@ -26,6 +26,8 @@ export default defineConfig({
     }
   },
   server: {
-    port: port
+    port: port,
+    host: true, // Allows access via local IP
+    strictPort: true, // Ensures port doesn't auto-switch
   }
 })

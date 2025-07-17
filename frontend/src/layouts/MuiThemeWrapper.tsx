@@ -1,25 +1,19 @@
 // import MuiThemeWrapper from '@/layouts/MuiThemeWrapper'
 
-// ====================< IMPORTS: REACT >=================================
+// ==========<  IMPORTS:  REACT  >===================================
 import { ReactNode, useMemo } from 'react'
 
-// ====================< IMPORTS: LAYOUT >================================
+// ==========<  IMPORTS:  LAYOUTS, PAGES, COMPONENTS  >==============
 
-// ====================< IMPORTS: PAGES >=================================
-
-// ====================< IMPORTS: COMPONENTS >============================
-
-// ====================< IMPORTS: TYPES >=================================
-
-// ====================< IMPORTS: CONTEXTS/HOOKS >========================
-import { ThemeProvider, createTheme } from '@mui/material/styles'
+// ==========<  IMPORTS:  TYPES, CONTEXTS/HOOKS, UTILS  >============
+import { ThemeProvider } from '@mui/material/styles'
 import { useTheme } from '@/hooks/useTheme'
+import { customDarkTheme } from '@/config/customDarkTheme'
+import { customLightTheme } from '@/config/customLightTheme'
 
-// ====================< IMPORTS: UTILS >=================================
+// ==========<  IMPORTS:  OTHER  >===================================
 
-// ====================< IMPORTS: OTHER >=================================
-
-// ====================< IMPORTS: STYLES >================================
+// ==========<  IMPORTS:  STYLES  >==================================
 import { CssBaseline } from '@mui/material'
 
 
@@ -28,13 +22,11 @@ export default function MuiThemeWrapper({ children }: { children: ReactNode }) {
   const { theme } = useTheme()
 
   // Resolve the theme to only use 'dark' or 'light'. MUI does not like 'system' and should be resolved before sending theme to MUI.
-  const resolvedTheme = theme === 'system'
-    ? window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-    : theme
+  const resolvedTheme = theme === 'system' ? window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light' : theme
 
-  const muiTheme = useMemo(() => createTheme({
-    palette: { mode: resolvedTheme }
-  }), [theme])
+  const muiTheme = useMemo(() => {
+    return resolvedTheme === 'dark' ? customDarkTheme : customLightTheme
+  }, [resolvedTheme])
 
   return (
     <ThemeProvider theme={muiTheme}>

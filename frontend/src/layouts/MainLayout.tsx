@@ -1,24 +1,16 @@
-// import MainLayout from '@/layouts/MainLayout'
+// import MainLayout from '@/pages/layouts/MainLayout'
 
-// ====================< IMPORTS: REACT >=================================
+// ==========<  IMPORTS:  REACT  >===================================
 import { Outlet } from 'react-router-dom'
 
-// ====================< IMPORTS: LAYOUT >================================
-
-// ====================< IMPORTS: PAGES >=================================
-
-// ====================< IMPORTS: COMPONENTS >============================
+// ==========<  IMPORTS:  LAYOUTS, PAGES, COMPONENTS  >==============
 import Box from '@mui/material/Box'
 
-// ====================< IMPORTS: TYPES >=================================
+// ==========<  IMPORTS:  TYPES, CONTEXTS/HOOKS, UTILS  >============
 
-// ====================< IMPORTS: CONTEXTS/HOOKS >========================
+// ==========<  IMPORTS:  OTHER  >===================================
 
-// ====================< IMPORTS: UTILS >=================================
-
-// ====================< IMPORTS: OTHER >=================================
-
-// ====================< IMPORTS: STYLES >================================
+// ==========<  IMPORTS:  STYLES  >==================================
 
 
 export default function MainLayout() {

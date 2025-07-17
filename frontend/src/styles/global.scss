@@ -43,3 +43,16 @@ html, body, #root {
   text-transform: none !important;
   border-radius: 9999px !important;
 }
+
+
+/* Dark Mode Specific Universal Themes */
+body[data-theme='dark'] {
+  --background-color: #181818;
+
+}
+
+/* Light Mode Specific Universal Themes */
+body[data-theme='light'] {
+  --background-color: #eee;
+
+}

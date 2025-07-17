@@ -1,23 +1,15 @@
 // import FullPageLoader from '@/components/loading/FullPageLoader'
 
-// ====================< IMPORTS: REACT >=================================
+// ==========<  IMPORTS:  REACT  >===================================
 
-// ====================< IMPORTS: LAYOUT >================================
-
-// ====================< IMPORTS: PAGES >=================================
-
-// ====================< IMPORTS: COMPONENTS >============================
+// ==========<  IMPORTS:  LAYOUTS, PAGES, COMPONENTS  >==============
 import { Box, CircularProgress } from '@mui/material'
 
-// ====================< IMPORTS: TYPES >=================================
+// ==========<  IMPORTS:  TYPES, CONTEXTS/HOOKS, UTILS  >============
 
-// ====================< IMPORTS: CONTEXTS/HOOKS >========================
+// ==========<  IMPORTS:  OTHER  >===================================
 
-// ====================< IMPORTS: UTILS >=================================
-
-// ====================< IMPORTS: OTHER >=================================
-
-// ====================< IMPORTS: STYLES >================================
+// ==========<  IMPORTS:  STYLES  >==================================
 
 
 export default function FullPageLoader() {
